@@ -6,6 +6,10 @@ let lettersCap = 'ABCDEFGHIJKLMOPQRSTUVWXYZ'.split('');
 let numbers = '1234567890'.split('');
 let specialChar = '!@#$%^&*()_+~.-'.split('');
 
+let includeLowerCase = false;
+let includeCapital = false;
+let includeNumbers = false;
+let includeSpecialChar = false;
 
 function generatePassword() {
   console.log('clicked');
