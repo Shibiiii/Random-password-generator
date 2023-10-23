@@ -1,8 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-let letters = 'abcdefghijklmnopqrstuvwxyz'.split("");
-let lettersCap = 'ABCDEFGHIJKLMOPQRSTUVWXYZ'.split("");
+let letters = 'abcdefghijklmnopqrstuvwxyz'.split('');
+let lettersCap = 'ABCDEFGHIJKLMOPQRSTUVWXYZ'.split('');
+let numbers = '1234567890'.split('');
+let specialChar = '!@#$%^&*()_+~.-'.split('');
 
 
 function generatePassword() {
