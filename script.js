@@ -1,12 +1,18 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var length;
-var alphabet;
-var specialCharacters;
-var numeric;
+
+let letters = 'abcdefghijklmnopqrstuvwxyz'.split("");
+let lettersCap = 'ABCDEFGHIJKLMOPQRSTUVWXYZ'.split("");
+
 
 function generatePassword() {
   console.log('clicked');
+  var userChoice = window.prompt("How many characters:"); {
+    if (userChoice < 8); {
+      return;
+    } 
+  }
+
 
 }
 
