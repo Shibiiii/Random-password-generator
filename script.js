@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 let letters = 'abcdefghijklmnopqrstuvwxyz'.split('');
 let lettersCap = 'ABCDEFGHIJKLMOPQRSTUVWXYZ'.split('');
 let numbers = '1234567890'.split('');
-let specialChar = '!@#$%^&*()_+~.-'.split('');
+let specialChar = '!@#$%^&*_+~.-'.split('');
 
 let includeLowerCase = false;
 let includeCapital = false;
@@ -12,13 +12,18 @@ let includeNumbers = false;
 let includeSpecialChar = false;
 
 function generatePassword() {
-  console.log('clicked');
-  var userChoice = window.prompt("How many characters:"); {
-    if (userChoice < 8); {
-      return;
-    } 
+  let potentialChar = [];
+  let charAmount = window.prompt('How many characters? (between 8-128):');
+  charAmount = parseInt(charAmount);
+
+  if ((charAmount) || charAmount<8 || charAmount>128) {
+    return '!Invalid character amount!'
   }
 
+  includeCapital = confirm ('Do you want capital letters?');
+  includeLowerCase = confirm ('Do you want lowercase letters?');
+  includeSpecialChar = confirm ('Do you want special characters?');
+  includeNumbers = confirm ('Do you want numbers?');
 
 }
 
