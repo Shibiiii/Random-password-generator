@@ -6,3 +6,6 @@ like if they wish for their password to contain Uppercase letters, Lowercase let
 # Screenshot
 
 # Deployed wbesite
+
+# Credits
+Emily Morosoff and her Preply tutor, Jaba
