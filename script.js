@@ -48,7 +48,7 @@ function generatePassword() {
   var confirmPass = ''
 
   for(var i = 0; i<charAmount; i++) {
-    var range = math.ceil(math.random()*potentialChar.length) - 1
+    var range = Math.ceil(Math.random()*potentialChar.length) - 1
     confirmPass += potentialChar[range]
   }
 return confirmPass
