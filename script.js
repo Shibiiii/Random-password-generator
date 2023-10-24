@@ -6,10 +6,10 @@ let lettersCap = 'ABCDEFGHIJKLMOPQRSTUVWXYZ'.split('');
 let numbers = '1234567890'.split('');
 let specialChar = '!@#$%^&*_+~.-'.split('');
 
-let includeLowerCase = false;
 let includeCapital = false;
-let includeNumbers = false;
+let includeLowerCase = false;
 let includeSpecialChar = false;
+let includeNumbers = false;
 
 function generatePassword() {
   let potentialChar = [];
@@ -51,13 +51,18 @@ function generatePassword() {
     let range = math.ceil(math.random()*potentialChar.length) - 1
     confirmPass += potentialChar[range]
   }
-
+return confirmPass
 }
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+
+  includeCapital = false;
+  includeLowerCase = false;
+  includeSpecialChar = false;
+  includeNumbers = false;
 
   passwordText.value = password;
 
