@@ -25,6 +25,26 @@ function generatePassword() {
   includeSpecialChar = confirm ('Do you want special characters?');
   includeNumbers = confirm ('Do you want numbers?');
 
+  if (!includeCapital && !includeLowerCase && !includeSpecialChar && !includeNumbers) {
+    return '!Must select at least one option!';
+  }
+
+  if (includeCapital) {
+    potentialChar = potentialChar.concat (lettersCap)
+  }
+
+  if (includeLowerCase) {
+    potentialChar = potentialChar.concat (letters)
+  }
+
+  if (includeSpecialChar) {
+    potentialChar = potentialChar.concat (specialChar)
+  }
+
+  if (includeNumbers) {
+    potentialChar =potentialChar.concat (numbers)
+  }
+
 }
 
 // Write password to the #password input
