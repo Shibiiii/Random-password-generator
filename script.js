@@ -1,22 +1,22 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-let letters = 'abcdefghijklmnopqrstuvwxyz'.split('');
-let lettersCap = 'ABCDEFGHIJKLMOPQRSTUVWXYZ'.split('');
-let numbers = '1234567890'.split('');
-let specialChar = '!@#$%^&*_+~.-'.split('');
+var letters = 'abcdefghijklmnopqrstuvwxyz'.split('');
+var lettersCap = 'ABCDEFGHIJKLMOPQRSTUVWXYZ'.split('');
+var numbers = '1234567890'.split('');
+var specialChar = '!@#$%^&*_+~.-'.split('');
 
-let includeCapital = false;
-let includeLowerCase = false;
-let includeSpecialChar = false;
-let includeNumbers = false;
+var includeCapital = false;
+var includeLowerCase = false;
+var includeSpecialChar = false;
+var includeNumbers = false;
 
 function generatePassword() {
-  let potentialChar = [];
-  let charAmount = window.prompt('How many characters? (between 8-128):');
+  var potentialChar = [];
+  var charAmount = window.prompt('How many characters? (between 8-128):');
   charAmount = parseInt(charAmount);
 
-  if ((charAmount) || charAmount<8 || charAmount>128) {
+  if (isNaN(charAmount) || charAmount<8 || charAmount>128) {
     return '!Invalid character amount!'
   }
 
@@ -45,10 +45,10 @@ function generatePassword() {
     potentialChar =potentialChar.concat (numbers)
   }
 
-  let confirmPass = ''
+  var confirmPass = ''
 
-  for(let i = 0; i<charAmount; i++) {
-    let range = math.ceil(math.random()*potentialChar.length) - 1
+  for(var i = 0; i<charAmount; i++) {
+    var range = math.ceil(math.random()*potentialChar.length) - 1
     confirmPass += potentialChar[range]
   }
 return confirmPass
