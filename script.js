@@ -45,6 +45,13 @@ function generatePassword() {
     potentialChar =potentialChar.concat (numbers)
   }
 
+  let confirmPass = ''
+
+  for(let i = 0; i<charAmount; i++) {
+    let range = math.ceil(math.random()*potentialChar.length) - 1
+    confirmPass += potentialChar[range]
+  }
+
 }
 
 // Write password to the #password input
